@@ -26,13 +26,13 @@ interface geeks
 
 //class Test implements bishal, geeks
 //{
-//    void show() // Overloaded method based on return type, Error
+//    public void show() // Overloaded method based on return type, Error
 //    {
 //    }
-//    int show() // Error
-//    {
-//        return 1;
-//    }
+////    public int show() // Error
+////    {
+////        return 1;
+////    }
 //}
 
 
@@ -59,10 +59,11 @@ class MainClass implements InterfaceA
         return "one";
     }
     @Override
-    public int fun(){
+    public int fun() {
         return 1;
     }
-//
+
+
 //    @Override
 //    public int test() {
 //        return 0;

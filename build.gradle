@@ -5,20 +5,25 @@ plugins {
 group 'org.example'
 version '1.0-SNAPSHOT'
 
+ext {
+    set('springCloudVersion', "2020.0.3")
+    springBootVersion= "2.5.3"
+}
+
 repositories {
     mavenCentral()
 }
 
 dependencies {
-//    implementation("org.springframework.boot:spring-boot-starter-parent:1.4.2")
+    implementation "org.springframework.boot:spring-boot-starter-parent:${springBootVersion}"
 //    implementation group: 'org.springframework', name: 'spring-beans', version: '6.0.6'
-//    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation "org.springframework.boot:spring-boot-starter-data-jpa:${springBootVersion}"
+//    implementation("com.h2database:h2:")
 //    implementation 'org.springframework.boot:spring-boot-starter-web:1.4.2'
 //    runtimeOnly 'com.mysql:mysql-connector-j'
-//    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation "org.springframework.boot:spring-boot-starter-test:${springBootVersion}"
 
 //    implementation 'org.springframework.boot:spring-boot-starter-actuator'
-//	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 //	implementation 'org.springframework.boot:spring-boot-starter-validation'
 //	implementation 'org.springframework.kafka:spring-kafka'
 //	implementation 'org.springframework.data:spring-data-envers'

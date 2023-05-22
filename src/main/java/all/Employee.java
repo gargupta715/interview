@@ -1,3 +1,5 @@
+package all;
+
 import java.util.Objects;
 
 public class Employee {
@@ -5,23 +7,27 @@ public class Employee {
     String empName;
     String address;
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Employee employee = (Employee) o;
-        return empId == employee.empId && empName.equals(employee.empName) && address.equals(employee.address);
-    }
+    Double salary;
+
+
+//    @Override
+//    public boolean equals(Object o) {
+//        if (this == o) return true;
+//        if (o == null || getClass() != o.getClass()) return false;
+//        Employee employee = (Employee) o;
+//        return empId == employee.empId && empName.equals(employee.empName) && address.equals(employee.address);
+//    }
 
     @Override
     public int hashCode() {
-        return Objects.hash(empId, empName, address);
+        return Objects.hash(empId, empName, address, salary);
     }
 
-    public Employee(int empId, String empName, String address) {
+    public Employee(int empId, String empName, String address, Double salary) {
         this.empId = empId;
         this.empName = empName;
         this.address = address;
+        this.salary = salary;
     }
 
     public int getEmpId() {
@@ -38,6 +44,14 @@ public class Employee {
 
     public void setEmpName(String empName) {
         this.empName = empName;
+    }
+
+    public Double getSalary() {
+        return salary;
+    }
+
+    public void setSalary(Double salary) {
+        this.salary = salary;
     }
 
     public String getAddress() {
